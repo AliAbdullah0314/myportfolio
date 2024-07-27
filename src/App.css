@@ -1,16 +1,16 @@
 @font-face {
 	font-family: Formula1;
-	src: url('./assets/font/Formula1-Bold.otf');
+	src: url('./assets/font/Formula1-Bold.ttf');
 	font-weight: 700;
 }
 @font-face {
 	font-family: Formula1;
-	src: url('./assets/font/Formula1-Wide.otf');
+	src: url('./assets/font/Formula1-Wide.ttf');
 	font-weight: 500;
 }
 @font-face {
 	font-family: Formula1;
-	src: url('./assets/font/Formula1-Regular.otf');
+	src: url('./assets/font/Formula1-Regular.ttf');
 	font-weight: 400;
 }
 
@@ -31,7 +31,7 @@ body {
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family: 'Centra', sans-serif !important;
+  font-family: 'Formula1', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -232,10 +232,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  /* background-image: url('./assets/img/banner-bg.png'); */
+  /* background-clip: url(./assets/vid/intro-vid.mov); */
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.banner .vid {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 10%;
 }
 .banner .tagline {
   font-weight: 700;
@@ -302,13 +311,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  height: 100vh;
+  
 }
 .skill-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
-  margin-top: -60px;
+  margin-top: -0px;
 }
 .skill h2 {
 	font-size: 45px;
@@ -340,7 +351,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project {
-  padding: 80px 0;
+  padding: 60px 0;
   position: relative;
   background-color: black;
 }
@@ -366,7 +377,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 .project .nav.nav-pills .nav-item {
-  width: 33.33333%;
+  width: 50%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -387,7 +398,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(27deg, rgba(17,17,17,1) 0%, rgba(0,210,231,1) 100%);
+    /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
     top: 0;
     left: 0;
     z-index: -1;

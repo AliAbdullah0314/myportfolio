@@ -1,9 +1,11 @@
-import { useState } from 'react'
-import { Navbar, Container } from 'react-bootstrap'
+import { useState, useEffect } from 'react'
+import { Navbar, Container, Nav } from 'react-bootstrap'
 import logo from '../assets/img/logo.svg';
-import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import linkedin from '../assets/img/nav-icon1.svg';
+import github from '../assets/img/github-mark-white.svg';
+import email from '../assets/img/email.svg';
+import resume from '../assets/img/resume.svg';
+
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -30,7 +32,7 @@ export const NavBar = () => {
     return (
         < Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
-                <Navbar.Brand href="#home">Ali Jafri</Navbar.Brand>
+                <Navbar.Brand href="#home" style={{color: '#fff'}}>Ali Jafri</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -40,10 +42,10 @@ export const NavBar = () => {
                     </Nav>
                     <span className='navbar-text'>
                         <div className='social-icon'>
-                            <a href=""><img src={navIcon1} alt="Github" /></a>
-                            <a href=""><img src={navIcon2} alt="LinkedIn" /></a>
-                            <a href=""><img src={navIcon3} alt="Email" /></a>
-                            <a href=""><img src={navIcon3} alt="Resume" /></a>
+                            <a href=""><img src={github} alt="Github" /></a>
+                            <a href=""><img src={linkedin} alt="LinkedIn" /></a>
+                            <a href=""><img src={email} alt="Email" /></a>
+                            <a href=""><img src={resume} alt="Resume" /></a>
                         </div>
                     </span>
                 </Navbar.Collapse>
