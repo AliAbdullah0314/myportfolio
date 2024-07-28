@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/headshot-circle.png";
+import headerImg from "../assets/img/headshot-circle2.png";
 import headerVid from "../assets/vid/intro-vid3.mp4";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
@@ -47,6 +47,7 @@ export const Banner = () => {
             setIndex(prevIndex => prevIndex + 1);
         }
     }
+    
 
     return (
         <section className="banner" id="home">
@@ -64,17 +65,20 @@ export const Banner = () => {
                                     <p>I’m a senior at NYU Abu Dhabi, majoring in Computer Science with a minor in Economics. Through my academic and extracurricular experiences, I have gained a strong foundation in software development, data analysis, and even economic principles. <br /><br />
                                         My interests include app and web development, as well as machine learning.
                                         Beyond technology, I have a deep-seated passion for motorsport, particularly Formula 1. This enthusiasm fuels my drive for excellence and precision in everything I do.</p>
-                                    <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                                    <button onClick={event =>  window.location.href='https://www.linkedin.com/in/ali-abdullah-jafri/'} >Let’s Connect <ArrowRightCircle size={25} /></button>
                                 </div>}
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <TrackVisibility>
+                        <div className= "animate__animated animate__zoomIn">
+                            <img src={headerImg} alt="Header Img" />
+                        </div>
+                        {/* <TrackVisibility>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                                     <img src={headerImg} alt="Header Img" />
                                 </div>}
-                        </TrackVisibility>
+                        </TrackVisibility> */}
                     </Col>
                 </Row>
             </Container>

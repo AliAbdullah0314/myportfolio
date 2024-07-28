@@ -231,7 +231,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
-  padding: 260px 0 100px 0;
+  padding: 260px 0 0px 0;
   /* background-image: url('./assets/img/banner-bg.png'); */
   /* background-clip: url(./assets/vid/intro-vid.mov); */
   background-position: top center;
@@ -309,9 +309,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 60px 0 50px 0;
   position: relative;
-  height: 100vh;
+  background: linear-gradient(223deg, rgba(0,0,0,0) 62%, rgba(0,210,231,0.6012998949579832) 100%);
+
   
 }
 .skill-bx {
@@ -320,6 +321,44 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-align: center;
   padding: 60px 50px;
   margin-top: -0px;
+}
+.skill-item {
+  position: relative; /* Needed for absolute positioning of pseudo-element */
+  border: 2px solid white; /* White border */
+  border-radius: 50px; /* Rounded corners to make it oval */
+  padding: 20px; /* Padding inside the border */
+  text-align: center; /* Center text */
+  margin: 10px; /* Space between items */
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  background: #111; /* Initial plain background color */
+  transition: transform 0.3s ease-in-out; /* Transition only for size change */
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(27deg, rgba(17, 17, 17, 1) 0%, rgb(0, 210, 231) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Transition for the opacity */
+  z-index: 0; /* Make sure it is behind the content */
+  border-radius: inherit; /* Match the border radius of the parent */
+}
+
+.skill-item:hover::before {
+  opacity: 1; /* Show the gradient on hover */
+}
+
+.skill-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.skill-item h4 {
+  position: relative;
+  z-index: 1; /* Ensure the text is above the pseudo-element */
 }
 .skill h2 {
 	font-size: 45px;
@@ -432,6 +471,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #00d2e7 -5.91%, #4A2FBD 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;
