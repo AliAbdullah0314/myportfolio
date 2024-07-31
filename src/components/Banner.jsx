@@ -13,17 +13,20 @@ export const Banner = () => {
     const [delta, setDelta] = useState(150 - Math.random() * 100);
     const [index, setIndex] = useState(1);
     const toRotate = ["Computer Science Major", "Studying at NYUAD", "Rising Senior"];
+    const description = "Rising Senior | Computer Science Major | Studying at NYUAD"
     const period = 2000;
 
     useEffect(() => {
         let ticker = setInterval(() => {
-            tick();
+            tick2();
         }, delta);
 
         return () => { clearInterval(ticker) };
     }, [text])
 
     const tick = () => {
+
+        
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -45,6 +48,19 @@ export const Banner = () => {
             setDelta(200);
         } else {
             setIndex(prevIndex => prevIndex + 1);
+        }
+    }
+
+    const tick2 = () => {
+        if (text.length<description.length) {
+            
+            let updatedText = description.substring(0, text.length + 1);
+            setText(updatedText);
+            setDelta(250 - Math.random() * 200)
+            
+        }
+        else {
+
         }
     }
     
