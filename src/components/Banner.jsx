@@ -13,7 +13,7 @@ export const Banner = () => {
     const [delta, setDelta] = useState(150 - Math.random() * 100);
     const [index, setIndex] = useState(1);
     const toRotate = ["Computer Science Major", "Studying at NYUAD", "Rising Senior"];
-    const description = "Rising Senior | Computer Science Major | Studying at NYUAD"
+    const description = "Computer Science Major @ NYUAD"
     const period = 2000;
 
     useEffect(() => {
@@ -77,7 +77,7 @@ export const Banner = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     {/* <span className="tagline">Welcome to my Portfolio</span> */}
                                     <h1>{`Hi! I'm Ali`} </h1>
-                                    <h4><span className="wrap">{text}</span></h4>
+                                    <h1><span className="wrap headline">{text}</span></h1>
                                     <p>I’m a senior at NYU Abu Dhabi, majoring in Computer Science with a minor in Economics. Through my academic and extracurricular experiences, I have gained a strong foundation in software development, data analysis, and even economic principles. <br /><br />
                                         My interests include app and web development, as well as machine learning.
                                         Beyond technology, I have a deep-seated passion for motorsport, particularly Formula 1. This enthusiasm fuels my drive for excellence and precision in everything I do.</p>

@@ -93,6 +93,19 @@ p.danger {
   color: red;
 }
 
+.separator1 {
+  width: 100vw;
+  height: 10vh;
+  z-index: 3;
+  background: linear-gradient(0deg, rgba(0,0,0,0.6685267857142857) 56%, rgba(255,255,255,0) 100%);
+}
+
+.separator2 {
+  width: 100vw;
+  height: 10vh;
+  z-index: 3;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 56%, rgba(0,0,0,0.7245491946778712) 100%);
+}
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
@@ -357,6 +370,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
+.headline {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 /************ Skills Css ************/
 .skill {
   padding: 60px 0 50px 0;
@@ -565,6 +583,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .proj-imgbx::before {
@@ -579,7 +598,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .proj-imgbx:hover::before {
+  
   height: 100%;
+}
+.proj-imgbx:hover {
+  
+  transform: scale(1.05);
 }
 
 .proj-txtx {
@@ -590,7 +614,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transform: translate(-50%, -50%);
   transition: 0.5s ease-in-out;
   opacity: 0;
-  width: 100%;
+  width: 90%;
 }
 
 .proj-imgbx:hover .proj-txtx {
@@ -598,11 +622,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   opacity: 1;
 }
 
+.gitlink {
+  width: 30px;
+  height: 30px;
+}
+
 .proj-txtx h4 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
+  font-size: clamp(1rem, 1.5vw, 2rem);
 }
 
 .proj-txtx span {
@@ -611,6 +641,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+
+
 
 .background-image-right {
   top: 20%;
