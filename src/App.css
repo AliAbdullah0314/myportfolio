@@ -106,6 +106,7 @@ p.danger {
   z-index: 3;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 56%, rgba(0,0,0,0.7245491946778712) 100%);
 }
+
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
