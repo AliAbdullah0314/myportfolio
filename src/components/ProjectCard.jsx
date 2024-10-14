@@ -19,7 +19,7 @@ export const ProjectCard = ({ title, description, imgUrl, linkUrl, linkImg }) =>
         <img src={imgUrl} />
         <div className="proj-txtx">
           <h4>{title}</h4>
-          <span>{description}</span><br /><br />
+          <span>{description}</span>
           <a href={linkUrl} target='_blank'><img className="gitlink" src={icon} /> </a>
         </div>
         
