@@ -67,7 +67,7 @@ export const Banner = () => {
 
     return (
         <section className="banner" id="home">
-            <video src={headerVid} autoPlay loop muted typeof="video/mp4" className="vid">
+            <video src={headerVid} autoPlay playsInline loop muted typeof="video/mp4" className="vid">
             </video>
             <Container>
                 <Row className="aligh-items-center">
