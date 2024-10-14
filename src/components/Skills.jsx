@@ -53,6 +53,35 @@ export const Skills = () => {
     { title: "TAILWIND CSS" },
   ]
 
+  const langs = [
+    { title: "JAVA" },
+    { title: "PYTHON" },
+    { title: "C/C++" },
+    { title: "JAVASCRIPT" },
+    { title: "HTML" },
+    { title: "CSS" },
+    { title: "SQL" },
+    { title: "ASSEMBLY (X86)" }
+  ]
+
+
+  const frameworks = [
+    { title: "MONGODB" },
+    { title: "GIT" },
+    { title: "FIREBASE" },
+    { title: "QUARKUS" },
+    { title: "DJANGO" },
+    { title: "FLASK" },
+    { title: "NODE.JS" },
+    { title: "VUE .JS" },
+    { title: "REACT" },
+    { title: "BOOTSTRAP" },
+    { title: "TAILWIND" },
+    { title: "JAVAFX" },
+    { title: "CAD DESIGN" },
+
+  ]
+
   return (
     <section className="skill" >
       <div className="container" id="skills">
@@ -61,7 +90,56 @@ export const Skills = () => {
             <div className="skill-bx">
               <h2>Skills</h2>
               {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p> */}
-              <Row>
+              <Tab.Container id="skills-tabs" defaultActiveKey="first">
+                <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                  <Nav.Item>
+                    <Nav.Link eventKey="first">Languages</Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link eventKey="second">Frameworks & Tools</Nav.Link>
+                  </Nav.Item>
+                  {/* <Nav.Item>
+                    <Nav.Link eventKey="third">Tools</Nav.Link>
+                  </Nav.Item> */}
+                </Nav>
+                <Tab.Content id="slideInUp" >
+                  <Tab.Pane eventKey="first">
+                    <Row>
+                      {
+                        langs.map((skill, index) => {
+                          return (
+                            <Col size={12} sm={6} md={4}>
+                              <div className="skill-item">
+                                <h4>{skill.title}</h4>
+                              </div>
+                            </Col>
+                          )
+                        })
+                      }
+                    </Row>
+                  </Tab.Pane>
+                  <Tab.Pane eventKey="second">
+                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p> */}
+                    <Row>
+                      {
+                        frameworks.map((skill, index) => {
+                          return (
+                            <Col size={12} sm={6} md={4}>
+                              <div className="skill-item">
+                                <h4>{skill.title}</h4>
+                              </div>
+                            </Col>
+                          )
+                        })
+                      }
+                    </Row>
+                  </Tab.Pane>
+                  {/* <Tab.Pane eventKey="third">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    </Tab.Pane> */}
+                </Tab.Content>
+              </Tab.Container>
+              {/* <Row>
                 {
                   skills.map((skill, index) => {
                     return (
@@ -73,7 +151,7 @@ export const Skills = () => {
                     )
                   })
                 }
-              </Row>
+              </Row> */}
               {/* <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <div className="item">
                   <img src={meter1} alt="Image" />
