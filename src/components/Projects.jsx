@@ -21,7 +21,7 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "QalbPlus",
+      title: "Qalb+",
       description: "A web-based system (Django) to find the nearest doctors who match your insurance, and book appointments",
       imgUrl: QalbPlus,
       linkUrl: "https://github.com/AliAbdullah0314/QalbPlus",
