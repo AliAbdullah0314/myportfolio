@@ -2,10 +2,10 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import QalbPlus from "../assets/img/qalbplus.jpg";
 import TaskManager from "../assets/img/taskmanager.jpg";
-import F1Fantasy from "../assets/img/f1fantasy.jpg";
+import F1Fantasy from "../assets/img/f1fantasy2.jpg";
 import ToDoList from "../assets/img/todolist.png";
 import MidisGame from "../assets/img/midisgame.webp";
-import SnakeGame from "../assets/img/snakegame.jpg";
+import F1ml from "../assets/img/f1ml.png";
 import LapTime from "../assets/img/f1laptimes.jpg";
 import Quantum from "../assets/img/quantum.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -15,6 +15,7 @@ import github from '../assets/img/github-mark-white.svg';
 import document from '../assets/img/document.svg';
 import QuantumSecurityPDF from '../assets/Quantum-security-technologies-EE.pdf'; // Import the PDF
 import MinimisingF1PDF from '../assets/Minimising-F1-Race-Time.pdf'; // Import the PDF
+import F1mlPDF from '../assets/Ali_Jafri_CapstoneProject1_Fall2024.pdf'; // Import the PDF
 
 
 export const Projects = () => {
@@ -56,10 +57,10 @@ export const Projects = () => {
       linkImg: "github"
     },
     {
-      title: "Snake Game",
-      description: "Famous Snake game made using Processing (Python)",
-      imgUrl: SnakeGame,
-      linkUrl: "https://github.com/AliAbdullah0314/Processing-Snake-Game",
+      title: "Predicting F1 Lap Times",
+      description: "Machine learning project that predicts Formula 1 lap times and race outcomes",
+      imgUrl: F1ml,
+      linkUrl: "https://github.com/AliAbdullah0314/F1_ML",
       linkImg: "github"
     },
   ];
@@ -78,7 +79,15 @@ export const Projects = () => {
       imgUrl: LapTime,
       linkUrl: MinimisingF1PDF,
       linkImg: "document"
+    },
+    {
+      title: "Predicting Formula 1 Race Outcomes: A Machine Learning Approach",
+      description: "",
+      imgUrl: F1ml,
+      linkUrl: F1mlPDF,
+      linkImg: "document"
     }
+
   ];
 
   return (
