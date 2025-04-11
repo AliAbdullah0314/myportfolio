@@ -78,6 +78,7 @@ export const Skills = () => {
     { title: "BOOTSTRAP" },
     { title: "TAILWIND" },
     { title: "JAVAFX" },
+    { title: "AWS" },
     { title: "CAD DESIGN" },
 
   ]
