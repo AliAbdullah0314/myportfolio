@@ -26,7 +26,7 @@ export const Banner = () => {
 
     // const tick = () => {
 
-        
+
     //     let i = loopNum % toRotate.length;
     //     let fullText = toRotate[i];
     //     let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
@@ -52,18 +52,18 @@ export const Banner = () => {
     // }
 
     const tick2 = () => {
-        if (text.length<description.length) {
-            
+        if (text.length < description.length) {
+
             let updatedText = description.substring(0, text.length + 1);
             setText(updatedText);
             setDelta(250 - Math.random() * 200)
-            
+
         }
         else {
 
         }
     }
-    
+
 
     return (
         <section className="banner" id="home">
@@ -78,15 +78,15 @@ export const Banner = () => {
                                     {/* <span className="tagline">Welcome to my Portfolio</span> */}
                                     <h1>{`Hi! I'm Ali`} </h1>
                                     <h1><span className="wrap headline">{text}</span></h1>
-                                    <p>I’m a senior at NYU Abu Dhabi, majoring in Computer Science with a minor in Economics. Through my academic and extracurricular experiences, I have gained a strong foundation in software development, data analysis, and even economic principles. <br /><br />
-                                        My interests include app and web development, as well as machine learning.
+                                    <p>I’m a senior at NYU Abu Dhabi, majoring in Computer Science with a minor in Economics. Through my academic and extracurricular experiences, I have gained a strong foundation in software development, data analysis, and economic principles. <br /><br />
+                                        My interests include web development and machine learning.
                                         Beyond technology, I have a deep-seated passion for motorsport, particularly Formula 1. This enthusiasm fuels my drive for excellence and precision in everything I do.</p>
-                                    <button onClick={event =>  window.location.href='https://www.linkedin.com/in/ali-abdullah-jafri/'} >Let’s Connect <ArrowRightCircle size={25} /></button>
+                                    <button onClick={event => window.location.href = 'https://www.linkedin.com/in/ali-abdullah-jafri/'} >Let’s Connect <ArrowRightCircle size={25} /></button>
                                 </div>}
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <div className= "animate__animated animate__zoomIn">
+                        <div className="animate__animated animate__zoomIn">
                             <img src={headerImg} alt="Header Img" />
                         </div>
                         {/* <TrackVisibility>
